@@ -1,0 +1,7 @@
+*
+!keeper_autotest
+!tests
+!poetry.lock
+!poetry.toml
+!pyproject.toml
+!README.md
