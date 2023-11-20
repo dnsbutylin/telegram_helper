@@ -5,9 +5,9 @@ fake = Faker()
 
 def main() -> None:
     while True:
-        a = fake.random_int(min=100_000, max=999_999)
-        print(a)
-        if a == 100_001:
+        random_value = fake.random_int(min=100_000, max=999_999)
+        print(random_value)
+        if random_value == 100_001:
             break
 
 
