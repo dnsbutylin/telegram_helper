@@ -1,3 +1,11 @@
 *
+!telegram_helper
+!tests
+!.bandit.yml
+!.pylintrc
+!poetry.lock
+!poetry.toml
+!pyproject.toml
 !Makefile
-!Dockerfile
+!README.md
+!setup.cfg
