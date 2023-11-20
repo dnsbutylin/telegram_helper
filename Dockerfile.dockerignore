@@ -1,5 +1,5 @@
 *
-!keeper_autotest
+!telegram_helper
 !tests
 !.bandit.yml
 !.flake8

@@ -1,12 +1,3 @@
 *
-!keeper_autotest
-!tests
-!.bandit.yml
-!.flake8
-!.pylintrc
-!poetry.lock
-!poetry.toml
-!pyproject.toml
 !Makefile
-!README.md
-!setup.cfg
+!Dockerfile
