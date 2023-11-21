@@ -1,8 +1,8 @@
-FROM nexus.ucb.infra/dh/python:3.11-buster
+FROM python:3.11-slim
 
 ARG PROJECT=app
 ARG POETRY_VERSION=1.3.2
-ARG GIT_HOST=git.ucb.local
+#ARG GIT_HOST=git.ucb.local
 
 WORKDIR /home/$PROJECT
 

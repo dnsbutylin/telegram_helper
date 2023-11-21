@@ -1,6 +1,5 @@
 *
 !telegram_helper
-!tests
 !.bandit.yml
 !.flake8
 !.pylintrc

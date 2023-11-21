@@ -1,20 +1,16 @@
-# syntax=docker/dockerfile:1.0-experimental
-
-FROM python:3.11-buster as builder
-
-ARG GIT_HOST=git.ucb.local
+FROM python:3.11-slim as builder
 
 COPY . .
 
-RUN pip install -U --no-cache-dir pip wheel setuptools poetry
+RUN pip install -U --no-cache-dir pip wheel poetry
 RUN poetry build -f wheel
 RUN poetry export -f requirements.txt -o requirements.txt --without-hashes
 
 RUN --mount=type=ssh mkdir -p -m 0600 ~/.ssh && \
-    ssh-keyscan -H -p 7999 $GIT_HOST >> ~/.ssh/known_hosts && \
-    pip wheel -w dist -r requirements.txt
+    ssh-keyscan -H -p 7999 $GIT_HOST >> ~/.ssh/known_hosts
+#    pip wheel -w dist -r requirements.txt
 
-FROM python:3.11-slim-buster as runtime
+FROM python:3.11-slim as runtime
 
 WORKDIR /app
 

@@ -2,7 +2,7 @@
 name = "telegram_helper"
 version = "0.1.0"
 description = "telegram_helper"
-authors = [""]
+authors = ["Denis Butylin <dbutylin@bki-okb.ru>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
